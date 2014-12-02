@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         jshint: {
             options: JSON.parse(require('fs').readFileSync('.jshintrc')),
-            all: ['**/*.js', '!node_modules/**/*']
+            all: ['**/*.js', '!node_modules/**/*', '!coverage/**/*']
         }
     });
 
