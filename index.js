@@ -10,12 +10,16 @@ module.exports = function (pattern) {
         var aLower = a.toLowerCase(),
             bLower = b.toLowerCase();
         if (aLower === bLower) {
-            return a > b;
+            aLower = a;
+            bLower = b;
         }
-        return aLower > bLower;
+        if (aLower > bLower) {
+            return 1;
+        }
+        return -1;
     }
     function stripPunctuation(str) {
-        return str.replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()@\+\?><\[\]\+\"\'»«\n]/g, '');
+        return str.replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()@\+\?><\[\]\+\"\'»«‹›”„“‚‘’…⟨⟩\`\n\r]/g, ' ');
     }
     function uniqueWords(str, matchCase) {
         str = String(str);
@@ -33,7 +37,7 @@ module.exports = function (pattern) {
             }));
         });
 
-        return uHyphens.sort(comperator).join(' ').toLowerCase().split(' ');
+        return _.uniq(uHyphens.sort(comperator).join(' ').toLowerCase().split(' '), true);
     }
 
     return {
