@@ -1,6 +1,6 @@
 {
   "name": "words-and-hyphens",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Extracts unique words and hyphens from text stripping punctuation on the way.",
   "author": {
     "name": "Boris Diakur",
@@ -29,8 +29,7 @@
   },
   "dependencies": {
     "hypher": "^0.2.2",
-    "lodash": "^2.4.1",
-    "string": "^2.2.0"
+    "lodash": "^2.4.1"
   },
   "devDependencies": {
     "coveralls": "~2.11.0",

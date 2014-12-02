@@ -3,7 +3,6 @@
 module.exports = function (pattern) {
 
     var _ = require('lodash'),
-        S = require('string'),
         Hypher = require('hypher'),
         h = new Hypher(pattern);
 
@@ -15,15 +14,14 @@ module.exports = function (pattern) {
         }
         return aLower > bLower;
     }
+    function stripPunctuation(str) {
+        return str.replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()@\+\?><\[\]\+\"\'»«\n]/g, '');
+    }
     function uniqueWords(str, matchCase) {
         str = String(str);
-        var result = _.uniq(S(str).stripPunctuation().split(' '), function (word) {
+        return _.compact(_.uniq(stripPunctuation(str).split(' '), function (word) {
             return matchCase ? word : word.toLowerCase();
-        }).sort(comperator);
-        if (result[0] === '') {
-            result.shift();
-        }
-        return result;
+        })).sort(comperator);
     }
     function uniqueHyphens(str) {
         var uWords = uniqueWords(str),
