@@ -17,9 +17,13 @@ module.exports = function (pattern) {
     }
     function uniqueWords(str, matchCase) {
         str = String(str);
-        return _.uniq(S(str).stripPunctuation().split(' '), function (word) {
+        var result = _.uniq(S(str).stripPunctuation().split(' '), function (word) {
             return matchCase ? word : word.toLowerCase();
         }).sort(comperator);
+        if (result[0] === '') {
+            result.shift();
+        }
+        return result;
     }
     function uniqueHyphens(str) {
         var uWords = uniqueWords(str),

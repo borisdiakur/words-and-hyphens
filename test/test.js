@@ -12,7 +12,7 @@ describe('words-and-hyphens', function () {
         describe('uniqueWords', function () {
 
             it('should return an array of unique words', function () {
-                var output = extractor.uniqueWords('My, st[ring] *full* of %punct) "and\' of the same Same same words.');
+                var output = extractor.uniqueWords('My, st[ring] *full* of %punct) "and\' of the same Same same words.\n');
                 assert.strictEqual(output[0], 'and');
                 assert.strictEqual(output[1], 'full');
                 assert.strictEqual(output[2], 'My');
