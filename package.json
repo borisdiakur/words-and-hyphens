@@ -2,11 +2,7 @@
   "name": "words-and-hyphens",
   "version": "0.0.4",
   "description": "Extracts unique words and hyphens from text stripping punctuation on the way.",
-  "author": {
-    "name": "Boris Diakur",
-    "email": "contact@borisdiakur.com",
-    "url": "https://github.com/borisdiakur"
-  },
+  "author": "Boris Diakur <contact@borisdiakur.com> (https://github.com/borisdiakur)",
   "scripts": {
     "test": "mocha test && grunt",
     "mocha": "mocha --reporter nyan test",
@@ -29,7 +25,7 @@
   },
   "dependencies": {
     "hypher": "^0.2.2",
-    "lodash": "^2.4.1"
+    "lodash": "^3.1.0"
   },
   "devDependencies": {
     "coveralls": "~2.11.0",
@@ -44,15 +40,7 @@
   },
   "private": false,
   "main": "index.js",
-  "keywords": [
-    "unique",
-    "words",
-    "hyphens",
-    "extract",
-    "hyphenate",
-    "strip",
-    "punctuation"
-  ],
+  "keywords": "unique, words, hyphens, extract, hyphenate, strip, punctuation",
   "license": "MIT",
   "readmeFilename": "README.md"
 }
