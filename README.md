@@ -2,7 +2,7 @@
 
 Extracts unique words and hyphens from text stripping punctuation on the way.
 
-[![Build Status](https://api.travis-ci.org/borisdiakur/words-and-hyphens.png?branch=master)](https://travis-ci.org/borisdiakur/words-and-hyphens)
+[![Build Status](https://travis-ci.org/borisdiakur/words-and-hyphens.svg?branch=master)](https://travis-ci.org/borisdiakur/words-and-hyphens)
 [![Coverage Status](https://coveralls.io/repos/borisdiakur/words-and-hyphens/badge.svg?branch=master)](https://coveralls.io/r/borisdiakur/words-and-hyphens?branch=master)
 [![Dependency Status](https://gemnasium.com/borisdiakur/words-and-hyphens.svg)](https://gemnasium.com/borisdiakur/words-and-hyphens)
 
